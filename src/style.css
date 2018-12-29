@@ -106,7 +106,7 @@ header {
 
 .carousel > img {
   max-width: 45%;
-  max-height: 400px;
+  max-height: 500px;
 }
 
 .carousel-smaller {
@@ -114,85 +114,16 @@ header {
 }
 
 .carousel-smaller > img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;  
   border-radius: 50%;
   display: inline-block;
-  margin: 15px;
+  margin: 20px;
   cursor: pointer;
   border: 2px solid #333;
 }
 
 .carousel-smaller > img.active {
-  border-color: #ad343e;
+  border-color: #9999ff;
   opacity: 0.6;
-}
-
-.search-params label {
-  display: block;
-  width: 60px;
-}
-
-.search-params input,
-.search-params select {
-  margin-bottom: 30px;
-  font-size: 18px;
-  height: 30px;
-  width: 325px;
-}
-
-.search-params button,
-#modal button,
-.petprofile button {
-  background-color: #ad343e;
-  padding: 5px 25px;
-  color: white;
-  font-size: 18px;
-  border: #333 1px solid;
-  border-radius: 5px;
-  display: block;
-  margin: 0 auto;
-  cursor: pointer;
-}
-
-.search-params button:hover {
-  background-color: #c36b72;
-}
-
-.search-params button:active {
-  background-color: #5f1d22;
-}
-
-.search-params button:focus {
-  border: 1px solid cornflowerblue;
-}
-
-#modal {
-  background-color: rgba(0, 0, 0, 0.9);
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#modal:empty {
-  display: none;
-}
-
-#modal > div {
-  background-color: white;
-  max-width: 500px;
-  padding: 15px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-#modal .buttons button {
-  display: inline-block;
-  margin-right: 15px;
 }
