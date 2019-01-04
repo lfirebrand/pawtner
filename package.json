@@ -9,6 +9,7 @@
     "lint": "eslint \"src/**/*.{js,jsx}\"",
     "test": "jest",
     "dev": "parcel src/index.html",
+    "start": "parcel build src/index.html --public-url ./",
     "build": "parcel build src/index.html"
   },
   "repository": {
