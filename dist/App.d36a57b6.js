@@ -27182,7 +27182,7 @@ if (!isNode) {
 }
 
 let key;
-const BASE_URL = "http://api.petfinder.com";
+const BASE_URL = "https://api.petfinder.com";
 const ANIMALS = [
   "dog",
   "cat",
@@ -27409,8 +27409,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 var petfinder = (0, _petfinderClient.default)({
-  key: "0ccd5ceb828e94225ecdff9abb20868c",
-  secret: "bf56e82455f839b84dba2f9de546e85a"
+  key: "0ccd5ceb828e94225ecdff9abb20868c" // secret: process.env.API_SECRET
+
 });
 
 var Results =
@@ -27816,7 +27816,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61219" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50762" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

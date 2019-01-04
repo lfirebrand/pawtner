@@ -3,8 +3,8 @@ import pf from "petfinder-client";
 import Pet from "./Pet";
 
 const petfinder = pf({
-  key: process.env.API_KEY,
-  secret: process.env.API_SECRET
+  key: process.env.API_KEY
+  // secret: process.env.API_SECRET
 });
 
 class Results extends React.Component {
