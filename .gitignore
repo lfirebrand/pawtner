@@ -1,4 +1,5 @@
 .env
-node_modules
-.cache
-.prettierrc
+**/node_modules
+**/.cache
+**/.dist
+.prettierrcnode_modules/
