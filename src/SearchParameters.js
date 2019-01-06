@@ -1,5 +1,5 @@
 import React from "react";
-import pf, { ANIMALS } from "petfinder-client";
+import pf, { ANIMALS, AGE, SEX } from "petfinder-client";
 
 const petfinder = pf({
   key: process.env.API_KEY
@@ -24,7 +24,8 @@ class SearchParameters extends React.Component {
     this.setState(
       {
         animal: event.target.value,
-        breed: ""
+        breed: "",
+        age: ""
       },
       this.getBreeds
     );
@@ -34,6 +35,35 @@ class SearchParameters extends React.Component {
       breed: event.target.value
     });
   };
+  handleAgeChange = event => {
+    this.setState({
+      age: event.target.value
+    });
+  };
+  handleSexChange = event => {
+    this.setState({
+      sex: event.target.value
+    });
+  };
+  // setAge() {
+  //   if (this.state.animal) {
+  //     petfinder.pet.find.age({ animal: this.state.animal }).then(data => {
+  //       if (
+  //         data.petfinder &&
+  //         data.petfinder.pet.find.age &&
+  //         Array.isArray(data.petfinder.pet.find.age)
+  //       ) {
+  //         this.setState({
+  //           breeds: data.petfinder.pet.find.age
+  //         });
+  //       } else {
+  //         this.setState({ ages: [] });
+  //       }
+  //     });
+  //   } else {
+  //     this.setState({ ages: [] });
+  //   }
+  // }
   getBreeds() {
     if (this.state.animal) {
       petfinder.breed.list({ animal: this.state.animal }).then(data => {
@@ -94,6 +124,38 @@ class SearchParameters extends React.Component {
             {this.state.breeds.map(breed => (
               <option key={breed} value={breed}>
                 {breed}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label htmlFor="age">
+          Age
+          <select
+            id="age"
+            value={this.state.age}
+            onChange={this.handleAgeChange}
+            onBlur={this.handleAgeChange}
+          >
+            <option />
+            {AGE.map(age => (
+              <option key={age} value={age}>
+                {age}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label htmlFor="sex">
+          Sex
+          <select
+            id="sex"
+            value={this.state.sex}
+            onChange={this.handleSexChange}
+            onBlur={this.handleSexChange}
+          >
+            <option />
+            {SEX.map(sex => (
+              <option key={sex} value={sex}>
+                {sex}
               </option>
             ))}
           </select>

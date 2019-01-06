@@ -17,6 +17,8 @@ const ANIMALS = [
   "horse",
   "pig"
 ];
+const SEX = ["M", "F"];
+const AGE = ["Baby", "Young", "Adult", "Senior"];
 
 const serialize = function(res) {
   const acc = {};
@@ -109,3 +111,5 @@ module.exports = function createPetfinderSingleton(creds) {
   return api;
 };
 module.exports.ANIMALS = ANIMALS;
+module.exports.SEX = SEX;
+module.exports.AGE = AGE;
