@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import { Router, Link } from "@reach/router";
 import Results from "./Results";
 import PetProfile from "./PetProfile";
+import SearchParameters from "./SearchParameters";
 
 class App extends React.Component {
   render() {
@@ -15,6 +16,7 @@ class App extends React.Component {
         <Router>
           <Results path="/" />
           <PetProfile path="/petprofile/:id" />
+          <SearchParameters path="/search-params" />
         </Router>
       </div>
     );
