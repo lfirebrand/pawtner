@@ -22,6 +22,8 @@ export interface Pet {
   };
   media: PetMedia;
   description: string;
+  sex: string;
+  age: string;
 }
 
 export interface PetResponse {
@@ -43,6 +45,8 @@ interface RequestOptions {
   animal?: string;
   breed?: string;
   location: string;
+  sex?: string;
+  age?: string;
 }
 
 interface BreedResponse {
