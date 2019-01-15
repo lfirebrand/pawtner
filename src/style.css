@@ -2,11 +2,19 @@
   box-sizing: border-box;
   color: #333;
 }
-
 body {
   background-color: #9999ff;
   margin: 0;
   font-family: "Muli", sans-serif;
+}
+
+header {
+  font-family: 'Pacifico', cursive;
+}
+
+header h2 {
+  font-size: 2.5rem;
+  color: #fff;
 }
 
 .search,
@@ -74,7 +82,7 @@ body {
 
 header a {
   color: #fff;
-  font-size: 60px;
+  font-size: 70px;
   text-decoration: none;
   font-weight: bold;
   display: block;
